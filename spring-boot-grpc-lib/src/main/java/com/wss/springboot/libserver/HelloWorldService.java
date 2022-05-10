@@ -6,7 +6,7 @@ package com.wss.springboot.libserver;
 /**
  * <pre>
  **
- * 声明接口
+ * 定义的接口的类，这里会生成一个SimpleGrpc.class，服务端需要来实现的
  * </pre>
  *
  * Protobuf service {@code com.wss.springboot.libserver.HelloWorldService}
@@ -17,6 +17,10 @@ public  abstract class HelloWorldService
 
   public interface Interface {
     /**
+     * <pre>
+     * 声明接口
+     * </pre>
+     *
      * <code>rpc sayHello(.com.wss.springboot.libserver.Person) returns (.com.wss.springboot.libserver.Greeting);</code>
      */
     public abstract void sayHello(
@@ -102,6 +106,10 @@ public  abstract class HelloWorldService
   }
 
   /**
+   * <pre>
+   * 声明接口
+   * </pre>
+   *
    * <code>rpc sayHello(.com.wss.springboot.libserver.Person) returns (.com.wss.springboot.libserver.Greeting);</code>
    */
   public abstract void sayHello(
@@ -189,7 +197,6 @@ public  abstract class HelloWorldService
       return channel;
     }
 
-    @Override
     public  void sayHello(
         com.google.protobuf.RpcController controller,
         com.wss.springboot.libserver.Person request,

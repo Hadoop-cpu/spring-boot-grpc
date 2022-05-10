@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  **
- * 声明接口
+ * 定义的接口的类，这里会生成一个SimpleGrpc.class，服务端需要来实现的
  * </pre>
  */
 @javax.annotation.Generated(
@@ -97,12 +97,15 @@ public final class HelloWorldServiceGrpc {
   /**
    * <pre>
    **
-   * 声明接口
+   * 定义的接口的类，这里会生成一个SimpleGrpc.class，服务端需要来实现的
    * </pre>
    */
   public static abstract class HelloWorldServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * 声明接口
+     * </pre>
      */
     public void sayHello(com.wss.springboot.libserver.Person request,
         io.grpc.stub.StreamObserver<com.wss.springboot.libserver.Greeting> responseObserver) {
@@ -125,7 +128,7 @@ public final class HelloWorldServiceGrpc {
   /**
    * <pre>
    **
-   * 声明接口
+   * 定义的接口的类，这里会生成一个SimpleGrpc.class，服务端需要来实现的
    * </pre>
    */
   public static final class HelloWorldServiceStub extends io.grpc.stub.AbstractAsyncStub<HelloWorldServiceStub> {
@@ -141,6 +144,9 @@ public final class HelloWorldServiceGrpc {
     }
 
     /**
+     * <pre>
+     * 声明接口
+     * </pre>
      */
     public void sayHello(com.wss.springboot.libserver.Person request,
         io.grpc.stub.StreamObserver<com.wss.springboot.libserver.Greeting> responseObserver) {
@@ -152,7 +158,7 @@ public final class HelloWorldServiceGrpc {
   /**
    * <pre>
    **
-   * 声明接口
+   * 定义的接口的类，这里会生成一个SimpleGrpc.class，服务端需要来实现的
    * </pre>
    */
   public static final class HelloWorldServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<HelloWorldServiceBlockingStub> {
@@ -168,6 +174,9 @@ public final class HelloWorldServiceGrpc {
     }
 
     /**
+     * <pre>
+     * 声明接口
+     * </pre>
      */
     public com.wss.springboot.libserver.Greeting sayHello(com.wss.springboot.libserver.Person request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -178,7 +187,7 @@ public final class HelloWorldServiceGrpc {
   /**
    * <pre>
    **
-   * 声明接口
+   * 定义的接口的类，这里会生成一个SimpleGrpc.class，服务端需要来实现的
    * </pre>
    */
   public static final class HelloWorldServiceFutureStub extends io.grpc.stub.AbstractFutureStub<HelloWorldServiceFutureStub> {
@@ -194,6 +203,9 @@ public final class HelloWorldServiceGrpc {
     }
 
     /**
+     * <pre>
+     * 声明接口
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.wss.springboot.libserver.Greeting> sayHello(
         com.wss.springboot.libserver.Person request) {
