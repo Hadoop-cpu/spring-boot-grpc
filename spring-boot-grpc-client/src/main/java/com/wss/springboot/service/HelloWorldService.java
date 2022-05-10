@@ -6,11 +6,7 @@ package com.wss.springboot.service;
  * @Date: 2022/5/9
  * @Time: 18:48
  */
-public interface GrpcClientService {
+public interface HelloWorldService {
 
-    /**
-     * @param name
-     * @return
-     */
-     String sendMessage(String name);
+    String helloWorld(String beginName,String endName);
 }
