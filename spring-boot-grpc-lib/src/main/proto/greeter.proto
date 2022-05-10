@@ -1,38 +1,18 @@
-/**
- * 编译工具版本
- */
 syntax = "proto3";
-/**
- * 指定生成实体
- */
-option java_multiple_files = true;
-/**
- * 指定生成接口
- */
-option java_generic_services = true;
-/**
- * 声明包
- */
-package com.wss.springboot.libserver;
-/**
- *声明实体
- */
+
+option java_package = "com.wss.springboot.libserver";
+
+// The greeter service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello ( HelloRequest) returns (  HelloReply) {}
+
+}
+// The request message containing the user's name.
 message HelloRequest {
-  string name = 1;
-  int32 age = 2;
-  repeated string hobbies = 3;
-  map<string, string> tags = 4;
-
+    string name = 1;
 }
-
-message HelloResponse {
-  string greeting = 1;
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
 }
-
-/**
- * 声明接口
- */
-service HelloService {
-  rpc hello(HelloRequest) returns (HelloResponse);
-}
-
