@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.7</version>
+        <relativePath/><!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.wss.springboot</groupId>
+    <artifactId>spring-boot-grpc</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-grpc</name>
+
+
+    <!--  声明模块，可写不写，创建子模块的时候会自动引入，没有引入再写  -->
+    <modules>
+        <!--    spring-boot-grpc-lib为maven子项目，用于生成由protobuf编译的接口API。    -->
+        <module>spring-boot-grpc-lib</module>
+        <!--    spring-boot-grpc-server为服务端SpringBoot子项目，负责实现接口功能。    -->
+        <module>spring-boot-grpc-server</module>
+        <!--    spring-boot-grpc-client为客户端Springboot子项目，负责调用服务端进行返回。    -->
+        <module>spring-boot-grpc-client</module>
+    </modules>
+
+    <properties>
+<!--        &lt;!&ndash;    jdk 版本    &ndash;&gt;-->
+<!--        <java.version>1.8</java.version>-->
+<!--        &lt;!&ndash;    springboot 整合grpc    &ndash;&gt;-->
+<!--        <net-devh-grpc.version>2.0.1.RELEASE</net-devh-grpc.version>-->
+<!--        &lt;!&ndash;    grpc版本    &ndash;&gt;-->
+<!--        <grpc-version>1.15.1</grpc-version>-->
+<!--        &lt;!&ndash;    netty版本    &ndash;&gt;-->
+<!--        &lt;!&ndash;        <netty-version>4.1.65.Final</netty-version>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;    Springboot-grpc版本，用于server服务注解使用    &ndash;&gt;-->
+
+<!--        &lt;!&ndash;    maven构建工具版本    &ndash;&gt;-->
+<!--        <maven-plugin-version>3.8.1</maven-plugin-version>-->
+<!--        &lt;!&ndash;    proto    &ndash;&gt;-->
+<!--        <protoc-version>3.6.1</protoc-version>-->
+<!--        &lt;!&ndash;        &ndash;&gt;-->
+<!--        <os-plugin-version>1.6.0</os-plugin-version>-->
+<!--        &lt;!&ndash;        &ndash;&gt;-->
+<!--        <protobuf-plugin-version>0.6.1</protobuf-plugin-version>-->
+
+        <java.version>1.8</java.version>
+        <os-plugin-version>1.6.0</os-plugin-version>
+        <grpc-version>1.15.1</grpc-version>
+        <protoc-version>3.6.1</protoc-version>
+        <protobuf-plugin-version>0.6.1</protobuf-plugin-version>
+        <net-devh-grpc.version>2.0.1.RELEASE</net-devh-grpc.version>
+
+
+    </properties>
+
+    <dependencies>
+
+        <!--核心grpc-spring-boot依赖-->
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-client-spring-boot-starter</artifactId>
+            <version>${net-devh-grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-server-spring-boot-starter</artifactId>
+            <version>${net-devh-grpc.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
