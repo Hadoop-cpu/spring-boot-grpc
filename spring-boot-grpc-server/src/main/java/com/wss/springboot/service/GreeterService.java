@@ -15,6 +15,7 @@ import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
 @Slf4j
 @GrpcService(GreeterOuterClass.class)
 public class GreeterService extends GreeterGrpc.GreeterImplBase {
+
     @Override
     public void sayHello(GreeterOuterClass.HelloRequest request, StreamObserver<GreeterOuterClass.HelloReply> responseObserver) {
         String message = "Hello " + request.getName();
