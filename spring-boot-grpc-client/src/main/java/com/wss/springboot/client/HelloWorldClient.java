@@ -19,6 +19,7 @@ import javax.annotation.PostConstruct;
 @Slf4j
 @Component
 public class HelloWorldClient {
+
     /**
      * 阻塞stub
      */
