@@ -55,11 +55,9 @@
                 <version>${protobuf-plugin-version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <protocArtifact>com.google.protobuf:protoc:${protoc-version}:exe:${os.detected.classifier}
-                    </protocArtifact>
+                    <protocArtifact>com.google.protobuf:protoc:${protoc-version}:exe:${os.detected.classifier}</protocArtifact>
                     <pluginId>grpc-java</pluginId>
-                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc-version}:exe:${os.detected.classifier}
-                    </pluginArtifact>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc-version}:exe:${os.detected.classifier}</pluginArtifact>
                     <!--默认值-->
                     <protoSourceRoot>${project.basedir}/src/main/proto</protoSourceRoot>
                     <!--默认值-->
